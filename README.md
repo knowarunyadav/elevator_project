@@ -1,5 +1,16 @@
 [[_TOC_]]
 
+# Basic Instructions
+This is some basic instructions to start the project
+- some commands to run in cli from projects directory where manage.py is present 
+1) python manage.py makemigrations
+2) python manage.py migrate
+3) python manage.py runserver
+- To login Admin 
+1) python manage.py createsuperuser
+2) python manage.py runserver
+3) go to url : http://127.0.0.1:8000/admin/
+
 # General Instructions
 - Default Drop Floor : Ground Floor
 - For Eg: if a request comes from any floor, it's drop floor will always be ground.

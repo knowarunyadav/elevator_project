@@ -31,7 +31,7 @@ urlpatterns = [
     # :return: JSON.
     path('elevators/', elevators,name='get_elevators'),
 
-    # This Api is used to move the lifts by one step ahead,i.e one step up or down
+    # This Api is used to move the elevator by one step ahead,i.e one step up or down
     # based on to the requested floor and open/close door.
     # :return: JSON | details of evelator after movement.
     path('move/', move,name='move'),

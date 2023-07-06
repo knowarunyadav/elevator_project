@@ -1,5 +1,7 @@
 [[_TOC_]]
 
+### Have explained everything in the video as well.
+
 # Basic Instructions
 This is some basic instructions to start the project
 - some commands to run in cli from projects directory where manage.py is present 
@@ -41,3 +43,4 @@ This is some basic instructions to start the project
 # Deployment
 
 - Can be deployed like any other simple django project.
+

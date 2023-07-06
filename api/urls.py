@@ -20,10 +20,34 @@ from .views import *
 app_name = "api"
 
 urlpatterns = [
-    path('elevators/<int:count>/', elevators),
-    path('elevators/', elevators),
-    path('move/', move),
-    path('elevator/<int:id>/', elevator),
-    path('elevator/not_working/<int:id>/', elevator_not_working),
-    path('request_elevator/<int:floor>/', request_elevator),
+
+    # This api can be used to create elevators
+    # :param: count: Number of Elevators you want you create
+    # :return: Will return the ids of the elevators created.
+    path('elevators/<int:count>/', elevators,name='set_elevators'),
+
+    # This api is used to get the details of the elevators .
+    # :param:count:None
+    # :return: JSON.
+    path('elevators/', elevators,name='get_elevators'),
+
+    # This Api is used to move the lifts by one step ahead,i.e one step up or down
+    # based on to the requested floor and open/close door.
+    # :return: JSON | details of evelator after movement.
+    path('move/', move,name='move'),
+
+    # Will provide the details for a particular elevator, its direction, avaiilable status
+    # doors open/close,current floor and next floors request.
+    # return : json
+    path('elevator/<int:id>/', elevator,name='elevator'),
+
+    # Set an elevator to non-operational
+    # :return: str : status updated.
+    path('elevator/not_working/<int:id>/', elevator_not_working,name='not_working'),
+
+    # Main Api to call the elevator from a particular floor
+    # :param:floor: Floor Number
+    # :return: elevator id to which the floor is assigned.
+    path('request_elevator/<int:floor>/', request_elevator,name='request_elevator'),
+
 ]

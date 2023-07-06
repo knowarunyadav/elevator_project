@@ -3,7 +3,7 @@
 # Basic Instructions
 This is some basic instructions to start the project
 - some commands to run in cli from projects directory where manage.py is present 
-1) python manage.py makemigrations
+1) python manage.py makemigrations api
 2) python manage.py migrate
 3) python manage.py runserver
 - To login Admin 
